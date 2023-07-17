@@ -74,6 +74,15 @@ class SiteController extends Controller {
        
 
     }
+
+
+    public function search() :void{
+
+        $search = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+        echo $search ['search'];
+ 
+     }
+
     
     
 }
