@@ -1,0 +1,33 @@
+header{
+    box-sizing: border-box;
+}
+
+
+
+.footerfixer{
+    bottom: 0;
+
+    width: 100%;
+    height: 65px;
+    background-color: RGBA(33,37,41,1);
+    box-sizing: border-box;
+ 
+    margin-top: 25%;
+}
+
+
+
+
+.footerpanel{
+   
+
+    
+}
+
+
+
+.menudrop{
+    padding-top: 2%;
+    
+    
+}

@@ -1,0 +1,27 @@
+{
+    "name": "gancho/testes",
+    "description": "cursoPHP",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "sys\\": "sys"
+        },
+        "files":[
+        
+            "settings.php"
+        
+        ]
+    },
+    "authors": [
+        {
+            "name": "Felipe Almeida"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "bissolli/validador-cpf-cnpj": "^1.2",
+        "pecee/simple-router": "dev-master",
+        "twig/twig": "^3.0",
+        "bramus/router": "~1.6"
+    }
+}
