@@ -79,7 +79,12 @@ class SiteController extends Controller {
     public function search() :void{
 
         $search = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-        echo $search ['search'];
+        if(isset($search)){
+           $posts = (new PostModel()) -> searchf($search['search']) ;
+           echo $this->template->temp_render('search.html', ['posts'=>$posts,
+            
+           'categorys'=>(new CatModel())->search(),]);
+        }
  
      }
 

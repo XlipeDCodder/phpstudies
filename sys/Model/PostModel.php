@@ -39,4 +39,22 @@ class PostModel {
 
         return $result;
     }
+
+
+
+    public function searchf(string $words) :array {
+        
+        
+        
+        
+        $query = "SELECT * FROM `posts` WHERE title LIKE '%{$words}%'";
+        
+        $stmt = Connector::getInstance()->query($query);
+        
+        $result = $stmt->fetchAll();
+        
+
+
+        return $result;
+    }
 }
