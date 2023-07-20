@@ -19,6 +19,7 @@
 body{
     min-height: 100vh;
     overflow-x: hidden;
+    background: #999;
 }
 
 .container{
@@ -35,6 +36,11 @@ body{
     transition: 0.5s;
     overflow: hidden;
 }
+.navigation.active{
+    width: 78px;
+    
+}
+
 
 .navigation ul{
     position: absolute;
@@ -137,6 +143,11 @@ body{
     transition: 0.5s;
 }
 
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
 .topbar{
     width: 100%;
     height: 60px;
@@ -204,4 +215,152 @@ body{
    width: 100%; 
    height: 100%;
    object-fit: cover;
+}
+
+
+
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+}
+
+.cardBox .card{
+    position: relative;
+    background: #999;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.16);
+    
+}
+
+.cardBox .card .numbers{
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: antiquewhite;
+}
+
+.cardBox .card .cardName{
+    color: antiquewhite;
+    font-size: 1.3rem;
+    margin-top: 5px;
+}
+
+.cardBox .card .iconBx{
+    color: rgb(90, 87, 84);
+    font-size: 3rem;
+}
+
+.cardBox .card:hover{
+    background: #222;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.16);
+}
+
+
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    
+}
+
+.details .recentPosts{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: #999;
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+
+}
+
+.details .cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.cardHeader h2{
+    font-weight: 600;
+    color: antiquewhite;
+}
+
+.cardHeader .btn{
+    position: relative;
+    padding: 5px 10px;
+    background: #222;
+    text-decoration: none;
+    color: antiquewhite;
+    border-radius: 6px;
+}
+
+.details table{
+   width: 100%; 
+   border-collapse: collapse;
+   margin-top: 10px;
+}
+
+
+.details table thead td{
+    font-weight: 600;
+}
+
+.details .recentPosts table tr{
+    color: #222;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.details .recentPosts table tr:last-child{
+    border-bottom: none;
+}
+
+.details .recentPosts table tbody tr:hover{
+    background: #222;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.16);
+    color: antiquewhite;
+    
+}
+
+.details .recentPosts table tr td{
+    padding: 10px;
+}
+.details .recentPosts table tr td:last-child{
+    text-align: end;
+}
+
+.details .recentPosts table tr td:nth-child(2){
+    text-align: center;   
+}
+.details .recentPosts table tr td:nth-child(3){
+    text-align: end;   
+}
+
+.status.posted{
+    padding: 2px 4px;
+    background: rgb(7, 131, 7);
+    color: antiquewhite;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.notposted{
+    padding: 2px 4px;
+    background: rgb(131, 7, 7);
+    color: antiquewhite;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
 }
