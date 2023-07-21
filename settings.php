@@ -6,3 +6,4 @@
     define ('URL_DEV', 'http://localhost');
     
     define ('URL_SITE', 'index.php');
+    define ('URL_ADMIN', 'index.php/admin');
