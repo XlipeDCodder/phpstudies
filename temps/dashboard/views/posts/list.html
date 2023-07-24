@@ -1,18 +1,17 @@
-<!DOCTYPE html>
 
+<html>
 
 <head>
-  <title>Dashboard</title>
+  <title>Posts</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets\css\dashstyle.css" />
-  <link rel="stylesheet" href="..\..\temps\dashboard\assets\css\dashstyle.css" />
+  <link rel="stylesheet" href="..\..\..\temps\dashboard\assets\css\admpost.css" />
 
 </head>
 
-<body>    
-    
-  <div class="container">
+
+<body>
+    <div class="container">
     <div class="navigation">
       <ul>
         <li>
@@ -38,7 +37,7 @@
         </li>
 
         <li>
-          <a href="{{url('../admin/posts/list')}}">
+          <a href="{{url('../../admin/posts/list')}}">
             <span class="icon">
               <ion-icon name="duplicate-sharp"></ion-icon>
             </span>
@@ -115,65 +114,18 @@
       </div>
 
       <div class="user">
-        <img src="..\..\temps\dashboard\assets\img\user1.png" alt="">
+        <img src="..\..\..\temps\dashboard\assets\img\user1.png" alt="">
       </div>
 
     </div>
 
-    <div class="cardBox">
-      <div class="card">
-          
-          
-        <div class="numbers">{{ quantidade }}</div>
-        <div class="cardName">Posts</div>
-
-        <div class="iconBx">
-          <ion-icon name="book"></ion-icon>
-        </div>
-      </div>
-
-
-
-      <div class="card">
-        <div class="numbers">6</div>
-
-        <div class="cardName">Categorys</div>
-
-        <div class="iconBx">
-          <ion-icon name="filter-circle"></ion-icon>
-        </div>
-      </div>
-
-
-
-      <div class="card">
-        <div class="numbers">1</div>
-
-        <div class="cardName">Users</div>
-
-        <div class="iconBx">
-          <ion-icon name="at-circle"></ion-icon>
-        </div>
-      </div>
-
-
-
-      <div class="card">
-        <div class="numbers">0</div>
-
-        <div class="cardName">Offline posts</div>
-
-        <div class="iconBx">
-          <ion-icon name="cloud-offline"></ion-icon>
-        </div>
-      </div>
-    </div>
+    
 
     <div class="details">
       <div class="recentPosts">
         <div class="cardHeader">
-          <h2>Recent Posts</h2>
-          <a href="{{url('../admin/posts/list')}}" class="btn">View All</a>
+          <h2>Posts</h2>
+          <a href="{{url('../../admin/posts/form')}}" class="btn">Add new Post</a>
         </div>
 
         <table>
@@ -215,7 +167,6 @@
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="..\..\temps\dashboard\assets\js\adminscripts.js"></script>
-</body>
-
+  <script src="..\..\..\temps\dashboard\assets\js\adminscripts.js"></script>
+    </body>
 </html>

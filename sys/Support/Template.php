@@ -13,9 +13,10 @@ class Template {
     
     public function __construct(string $directories) {
         $loader = new \Twig\Loader\FilesystemLoader($directories);
-        $this->twig = new \Twig\Environment($loader);
+        $this->twig = new \Twig\Environment($loader, ['debug' => true]);
         $lexer = new Lexer($this->twig, array ($this->helpers()) );
         $this->twig->setLexer($lexer);
+        $this->twig->addExtension(new \Twig\Extension\DebugExtension());
     }
     
     public function temp_render(string $view, array $data):string {
