@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="..\..\..\temps\dashboard\assets\css\admpost.css" />
-
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 
@@ -124,20 +124,56 @@
     <div class="details">
       <div class="recentPosts">
         <div class="cardHeader">
-          <h2>New posts</h2>
+          <h2>Add new posts</h2>
         </div>
+         
+          <div class="wrapper">
+              
+            <form  action="{{url('../../admin/posts/register')}}" method="post">
+                <h1>Register</h1>
+                
+                <div class="input-bx">
+                    <label for="title">Title</label>
+                    <br>
+                    <input type="text" name="title" id="title" placeholder="Post title" required>
+                    <i class='bx bxs-captions' ></i>
+                </div>
+                
+                <div class="input-bx">
+                    <label for="category_id">Category</label>
+                    <br>
+                    <select name="category_id" id="category_id">                          
+                        <option value="1">Categoria 1</option>
+                    </select>
+                    
+                </div>
+                
+                
+                <div class="input-bx">
+                    <label for="text">Text</label>
+                    <br>
+                    <textarea name="text" id="text" placeholder="Post text" required></textarea>
+                    <i class='bx bx-text' ></i>
+                </div>
+                
+                <div class="input-bx">
+                    <label for="status">Status</label>
+                    <br>
+                    <select name="status" id="staus">
+                        <option value="1">Submit as posted</option>
+                        <option value="0">Submit as queued</option>
+                    </select>
+                </div>
+                <br>
+                <div class="input-bx">
+                    <input type="submit" value="Submit">
+                </div>
 
-          <form  action="{{url('../../admin/posts/register')}}" method="post">
-                <label for="title"> Title
-                    <input type="text" name="title" id="title" placeholder="Post title"/>
-                </label>
+            </form>  
               
-                <label for="text"> Text
-                    <textarea name="text" id="text" placeholder="Post text"> </textarea>
-                </label>
-              
-          </form>  
-      
+          </div> 
+          
+          
       </div>
 
       
@@ -150,7 +186,7 @@
 
 
 
-
+  <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="..\..\..\temps\dashboard\assets\js\adminscripts.js"></script>

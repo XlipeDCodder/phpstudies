@@ -2,6 +2,7 @@
 
 namespace sys\Controllers\Admin;
 use sys\Model\PostModel;
+use sys\Model\CatModel;
 
 class AdminPosts extends AdminController {
 
@@ -15,8 +16,9 @@ class AdminPosts extends AdminController {
     
     
         public function  register():void {
-        
-        
+         
+
+            
           echo $this->template->temp_render('posts/form.html', [
           
         ]);

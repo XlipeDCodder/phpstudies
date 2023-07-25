@@ -44,4 +44,41 @@ class PostModel {
         
         return $result;
     }
+    
+        public function countOffPosts() :string {
+        $query = "SELECT COUNT(DISTINCT id) as offposts FROM `posts` WHERE status=0 ";
+        $stmt = Connector::getInstance()->query($query);
+        $result = strval($stmt->fetch()->offposts);
+        
+        return $result;
+    }
+    
+    
+        public function countCat() :string {
+        $query = "SELECT COUNT(DISTINCT id) as qtdcat FROM `categorys`";
+        $stmt = Connector::getInstance()->query($query);
+        $result = strval($stmt->fetch()->qtdcat);
+        
+        return $result;
+    }
+    
+    
+    
+    
+            public function list(int $id = null) :array {
+        
+        
+        
+        
+        $query = "SELECT * FROM `categorys`"
+                . "ORDER BY id DESC";
+        
+        $stmt = Connector::getInstance()->query($query);
+        
+        $result = $stmt->fetchAll();
+        
+
+
+        return $result;
+    }
 }
