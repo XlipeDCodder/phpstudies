@@ -76,9 +76,6 @@ class PostModel {
         $stmt = Connector::getInstance()->query($query);
         
         $result = $stmt->fetchAll();
-        
-
-
         return $result;
     }
 }

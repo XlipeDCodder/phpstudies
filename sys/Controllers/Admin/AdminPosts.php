@@ -17,11 +17,12 @@ class AdminPosts extends AdminController {
     
         public function  register():void {
          
-
+        $PostModel = new PostModel();
+        $variables = [  'list'  => $PostModel->list()
+                     ];
+        
             
-          echo $this->template->temp_render('posts/form.html', [
-          
-        ]);
+          echo $this->template->temp_render('posts/form.html', $variables);
         
     }
     
