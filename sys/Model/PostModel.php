@@ -78,4 +78,11 @@ class PostModel {
         $result = $stmt->fetchAll();
         return $result;
     }
+    //DELETE FROM TABLE WHERE ID IN (ARRAY)
+    public function storagepost(array $data) :void {
+        $query = "INSERT INTO posts (category_id, title, text, status) VALUES (?, ?, ?, ?) ";
+        $stmt = Connector::getInstance()->prepare($query);
+        $stmt->execute([ $data['category_id'], $data['title'], $data['text'], $data['status'] ]);
+    }
+    
 }

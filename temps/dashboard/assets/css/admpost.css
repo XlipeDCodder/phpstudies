@@ -305,7 +305,24 @@ body{
     text-decoration: none;
     color: antiquewhite;
     border-radius: 6px;
+    
 }
+
+.cardHeader .btns{
+    width: 30%;
+    height: 30px;
+    background: #222;
+    color: antiquewhite;
+    border-radius: 35px;
+}
+
+
+
+.cardHeader .btn#addpost{
+     margin-left: 450px
+    }
+
+
 
 .details table{
    width: 100%; 
@@ -348,6 +365,9 @@ body{
     text-align: end;   
 }
 
+.details .recentPosts table tr td#checkmark{
+    padding-right: 30px;
+}
 .status.posted{
     padding: 2px 4px;
     background: rgb(7, 131, 7);

@@ -134,35 +134,38 @@
 
     <div class="details">
       <div class="recentPosts">
+          
         <div class="cardHeader">
           <h2>Posts</h2>
-          <a href="{{url('../../admin/posts/form')}}" class="btn" id="addpost">Add new Post</a>
-          <a href="{{url('../../admin/posts/listtodel')}}" class="btn">Delete an existant Post</a>
+          <button type="submit" class="btns"> Delete </button>
+          <!--<a href="{{url('../../admin/posts/form')}}" class="btn" id="addpost">Add new Post</a>-->
+          <!--<a href="{{url('../../admin/posts/listtodel')}}" class="btn">Delete an existant Post</a>-->
         </div>
-
+    
         <table>
           <thead>
-            <tr>
+            <tr>                
               <td>Title</td>
               <td>Text</td>
-              <td>Status</td>
+              <td>Selected</td>
             </tr>
           </thead>
-          
+           
 
           <tbody>
               {%for post in posts%}
             <tr>
               <td>{{post.title}}</td>
               <td>{{post.text}}</td>
-              <td>{{ (post.status == 1) ? "<td><span class='status posted'>Posted</span></td>":"<td><span class='status notposted'>Not Posted</span></td>"}}</td>
+              <td id="checkmark"> <input type="checkbox" name="id_to_delete[]" value="{{post.id}}"> </td>
             </tr>
               {%endfor%}
 
-
+              
           </tbody>
+          
         </table>
-      
+       
       
       </div>
 
