@@ -308,19 +308,25 @@ body{
     
 }
 
-.cardHeader .btns{
+ .btns{
     width: 30%;
     height: 30px;
     background: #222;
     color: antiquewhite;
     border-radius: 35px;
+    cursor: pointer;
+}
+
+.delbtn{
+    width: 100%;
+    padding-left: 40%;
+    box-sizing: border-box;
+    
 }
 
 
 
-.cardHeader .btn#addpost{
-     margin-left: 450px
-    }
+
 
 
 
@@ -367,6 +373,7 @@ body{
 
 .details .recentPosts table tr td#checkmark{
     padding-right: 30px;
+    
 }
 .status.posted{
     padding: 2px 4px;

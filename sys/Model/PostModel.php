@@ -85,4 +85,12 @@ class PostModel {
         $stmt->execute([ $data['category_id'], $data['title'], $data['text'], $data['status'] ]);
     }
     
+    public function deletepost(string $data)  {
+        $query = "DELETE FROM posts WHERE id IN ".$data;
+        $stmt = Connector::getInstance()->prepare($query);
+        $stmt->execute();
+
+       }
+
+ 
 }

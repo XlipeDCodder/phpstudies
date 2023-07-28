@@ -136,12 +136,14 @@
       <div class="recentPosts">
           
         <div class="cardHeader">
-          <h2>Posts</h2>
-          <button type="submit" class="btns"> Delete </button>
-          <!--<a href="{{url('../../admin/posts/form')}}" class="btn" id="addpost">Add new Post</a>-->
-          <!--<a href="{{url('../../admin/posts/listtodel')}}" class="btn">Delete an existant Post</a>-->
+          <h2>Posts to delete
+          </h2>
         </div>
-    
+          
+       <form action="{{url('../../admin/posts/listtodel')}}" method="post">
+           <div class="delbtn">
+               <input type="submit" class="btns" value="Delete">
+           </div>
         <table>
           <thead>
             <tr>                
@@ -157,7 +159,7 @@
             <tr>
               <td>{{post.title}}</td>
               <td>{{post.text}}</td>
-              <td id="checkmark"> <input type="checkbox" name="id_to_delete[]" value="{{post.id}}"> </td>
+              <td id="checkmark"> <input type="checkbox" name="chk[]" value="{{post.id}}"> </td>
             </tr>
               {%endfor%}
 
@@ -165,8 +167,7 @@
           </tbody>
           
         </table>
-       
-      
+     </form>  
       </div>
 
       

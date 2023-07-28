@@ -4,7 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/sys/Controllers/Admin/AdminPosts.php</file>
-            <file>file:/C:/xampp/htdocs/sys/Controllers/Admin/AdminDashboard.php</file>
+            <file>file:/C:/xampp/htdocs/routes.php</file>
+            <file>file:/C:/xampp/htdocs/temps/dashboard/views/posts/list.html</file>
             <file>file:/C:/xampp/htdocs/temps/dashboard/assets/css/admpost.css</file>
             <file>file:/C:/xampp/htdocs/sys/Model/PostModel.php</file>
             <file>file:/C:/xampp/htdocs/temps/dashboard/views/posts/listtodel.html</file>
