@@ -65,7 +65,7 @@ class PostModel {
     
     
     
-            public function list(int $id = null) :array {
+         public function list(int $id = null) :array {
         
         
         
@@ -78,13 +78,21 @@ class PostModel {
         $result = $stmt->fetchAll();
         return $result;
     }
-    //DELETE FROM TABLE WHERE ID IN (ARRAY)
+    
+    
+    
+
+    
+    
+    
+    
+    
     public function storagepost(array $data) :void {
         $query = "INSERT INTO posts (category_id, title, text, status) VALUES (?, ?, ?, ?) ";
         $stmt = Connector::getInstance()->prepare($query);
         $stmt->execute([ $data['category_id'], $data['title'], $data['text'], $data['status'] ]);
     }
-    
+    //DELETE FROM TABLE WHERE ID IN (ARRAY)
     public function deletepost(string $data)  {
         $query = "DELETE FROM posts WHERE id IN ".$data;
         $stmt = Connector::getInstance()->prepare($query);

@@ -5,7 +5,7 @@
   <title>Posts</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="..\..\..\temps\dashboard\assets\css\admpost.css" />
+  <link rel="stylesheet" href="..\..\..\..\temps\dashboard\assets\css\admpost.css" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
@@ -37,7 +37,7 @@
         </li>
 
         <li>
-          <a href="{{url('../../admin/posts/list')}}">
+          <a href="{{url('../../../admin/posts/list')}}">
             <span class="icon">
               <ion-icon name="duplicate-sharp"></ion-icon>
             </span>
@@ -135,7 +135,7 @@
     <div class="details">
       <div class="recentPosts">
         <div class="cardHeader">
-          <h2>Add new posts</h2>
+          <h2>Add/Edit post</h2>
         </div>
          
           <div class="wrapper">
@@ -146,7 +146,7 @@
                 <div class="input-bx">
                     <label for="title">Title</label>
                     <br>
-                    <input type="text" name="title" id="title" placeholder="Post title" required>
+                    <input type="text" name="title" id="title" placeholder="Post title" value="{{posts.title}}" required>
                     <i class='bx bxs-captions' ></i>
                 </div>
                 
@@ -156,7 +156,7 @@
                 <div class="input-bx">
                     <label for="text">Text</label>
                     <br>
-                    <textarea name="text" id="text" placeholder="Post text" required></textarea>
+                    <textarea name="text" id="text" placeholder="Post text" required>{{posts.text}}</textarea>
                     <i class='bx bx-text' ></i>
                 </div>
                 
@@ -165,8 +165,8 @@
                             <label for="status">Status</label>
                             <br>
                             <select name="status" id="staus">
-                                <option value="1">Submit as posted</option>
-                                <option value="0">Submit as queued</option>
+                                <option value="1" {%if posts.status == "1" %}selected{%endif%}>Submit as posted</option>
+                                <option value="0" {%if posts.status == "0" %}selected{%endif%}>Submit as queued</option>
                             </select>
                         </div>
                     

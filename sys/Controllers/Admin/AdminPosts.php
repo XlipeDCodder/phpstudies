@@ -64,5 +64,13 @@ class AdminPosts extends AdminController {
         
     }
     
+    public function edit(int $id): void {
+       $PostModel = new PostModel();
+       $variables =[
+           'posts' => $PostModel->searchById($id),
+           'list' => $PostModel->list()
+       ];
+       echo $this->template->temp_render('posts/form.html', $variables);
+    }
     
 }
