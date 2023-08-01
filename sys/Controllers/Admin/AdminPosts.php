@@ -65,11 +65,25 @@ class AdminPosts extends AdminController {
     }
     
     public function edit(int $id): void {
+       $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+        if(isset($data)){
+          (new PostModel())->updatepost($data, $id);   
+             header('Location: /index.php/admin/posts/list');
+             exit;  
+         } 
+       
+       
+       
+       
+       
+       
        $PostModel = new PostModel();
        $variables =[
+           'id' => $id,
            'posts' => $PostModel->searchById($id),
-           'list' => $PostModel->list()
-       ];
+           'list' => $PostModel->list(),
+                   ];
+       
        echo $this->template->temp_render('posts/form.html', $variables);
     }
     

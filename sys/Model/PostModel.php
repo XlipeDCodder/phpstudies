@@ -9,11 +9,23 @@ use sys\Nucleo\Connector;
  * @author felipe.almeida
  */
 class PostModel {
+
     public function search(int $id = null) :array {
-        $query = "SELECT * FROM `posts`";
+        $query = "SELECT * FROM `posts` ";
         $stmt = Connector::getInstance()->query($query);
         $result = $stmt->fetchAll();
+        return $result;
+    }
 
+
+
+
+
+
+    public function search1(int $id = null) :array {
+        $query = "SELECT * FROM `posts` where status = 1";
+        $stmt = Connector::getInstance()->query($query);
+        $result = $stmt->fetchAll();
         return $result;
     }
     
@@ -99,6 +111,12 @@ class PostModel {
         $stmt->execute();
 
        }
-
- 
+    
+    public function updatepost(array $data, int $id) :void {
+        $query = "UPDATE posts SET category_id = ?, title = ?, text = ?, status = ? WHERE id = ?";
+        $stmt = Connector::getInstance()->prepare($query);
+        $stmt->execute([ $data['category_id'], $data['title'], $data['text'], $data['status'], $id ]);
+    }
+       
+       
 }

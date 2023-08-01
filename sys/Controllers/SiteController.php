@@ -25,7 +25,7 @@ class SiteController extends Controller {
     
      public function home() :void {
         
-        $posts =(new PostModel())->search();
+        $posts =(new PostModel())->search1();
     echo $this->template->temp_render('index.html', ['posts'=>$posts,
         
                    'categorys'=>(new CatModel())->search(),
@@ -36,7 +36,7 @@ class SiteController extends Controller {
     
     public function index() :void {
         
-        $posts =(new PostModel())->search();
+        $posts =(new PostModel())->search1();
     echo $this->template->temp_render('index.html', [
         
           'posts'=>$posts,
