@@ -375,6 +375,15 @@ body{
     padding-right: 30px;
     
 }
+.details .recentPosts table tr td a{
+    font-size: 1.75rem;
+    color: antiquewhite;
+}
+
+
+
+
+
 .status.posted{
     padding: 2px 4px;
     background: rgb(7, 131, 7);

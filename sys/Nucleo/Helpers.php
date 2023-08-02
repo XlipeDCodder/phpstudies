@@ -3,8 +3,23 @@
 namespace sys\Nucleo;
 
 use Exception;
+use sys\Nucleo\Session;
 
 class Helpers{
+    
+    
+    
+    public function flash() :?string {
+        $session = new Session();
+        if($flash = $session->flash()){
+            echo $flash;
+        }
+        return null;
+    }
+    
+    
+    
+    
     
     
     public static function cutvalor ( float $valor): string  {

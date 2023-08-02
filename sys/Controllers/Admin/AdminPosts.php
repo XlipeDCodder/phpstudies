@@ -20,6 +20,7 @@ class AdminPosts extends AdminController {
          $data = filter_input_array(INPUT_POST, FILTER_DEFAULT);
          if(isset($data)){
              (new PostModel())->storagepost($data);
+             
              header('Location: /index.php/admin/posts/list');
              exit;
              
