@@ -11,7 +11,7 @@ use sys\Nucleo\Connector;
 class PostModel {
 
     public function search(int $id = null) :array {
-        $query = "SELECT * FROM `posts` ";
+        $query = "SELECT * FROM `posts` ORDER BY id DESC ";
         $stmt = Connector::getInstance()->query($query);
         $result = $stmt->fetchAll();
         return $result;
@@ -23,7 +23,7 @@ class PostModel {
 
 
     public function search1(int $id = null) :array {
-        $query = "SELECT * FROM `posts` where status = 1";
+        $query = "SELECT * FROM `posts` where status = 1  ORDER BY id DESC";
         $stmt = Connector::getInstance()->query($query);
         $result = $stmt->fetchAll();
         return $result;
