@@ -14,6 +14,8 @@ SimpleRouter::post(URL_SITE.'/search','SiteController@search');
 
 
 SimpleRouter::group(['namespace' => 'Admin'], function () {
+    SimpleRouter::match(['get','post'], URL_ADMIN.'/login', 'AdminLogin@login');
+    SimpleRouter::match(['get','post'], URL_ADMIN.'/creataccadm', 'AdminReg@admregister');
     SimpleRouter::get(URL_ADMIN.'/dashboard', 'AdminDashboard@dashboard');
     SimpleRouter::get(URL_ADMIN.'/posts/list', 'AdminPosts@list');
     SimpleRouter::match(['get','post'], URL_ADMIN.'/posts/form', 'AdminPosts@register');

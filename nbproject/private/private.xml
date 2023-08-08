@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/sys/Controllers/Admin/AdminPosts.php</file>
-            <file>file:/C:/xampp/htdocs/temps/dashboard/views/posts/list.html</file>
-            <file>file:/C:/xampp/htdocs/temps/dashboard/views/posts/form.html</file>
-            <file>file:/C:/xampp/htdocs/sys/Model/PostModel.php</file>
-            <file>file:/C:/xampp/htdocs/sys/Nucleo/Session.php</file>
+            <file>file:/C:/xampp/htdocs/temps/dashboard/views/posts/adminregister.html</file>
+            <file>file:/C:/xampp/htdocs/sys/Controllers/Admin/AdminLogin.php</file>
+            <file>file:/C:/xampp/htdocs/routes.php</file>
+            <file>file:/C:/xampp/htdocs/temps/dashboard/views/adminlogin.html</file>
+            <file>file:/C:/xampp/htdocs/temps/dashboard/assets/css/admstyle.css</file>
         </group>
     </open-files>
 </project-private>
